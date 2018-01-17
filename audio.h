@@ -124,7 +124,9 @@ private:
 
 };
 
-#if defined(Q_OS_WIN)
+#if defined(Q_OS_LINUX)
+#include "audio_alsa.h"
+#elif defined(Q_OS_WIN)
 #include "audio_win.h"
 #elif defined(Q_OS_MAC)
 #include "audio_osx.h"

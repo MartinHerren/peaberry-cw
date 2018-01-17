@@ -6,6 +6,13 @@ QT += core gui widgets opengl
 
 QMAKE_CXXFLAGS += -std=c++11
 
+linux {
+    TARGET = "peaberrycw"
+    SOURCES += audio_alsa.cpp
+    HEADERS += audio_alsa.h
+    LIBS += -lusb
+}
+
 macx {
     TARGET = "Peaberry CW"
     SOURCES += audio_osx.cpp
